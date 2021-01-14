@@ -32,7 +32,7 @@
                 background-color:#dde8cb;border-top: 1.50pt solid #c0c0c0; border-bottom: 1.50pt solid #c0c0c0; border-left: 1.50pt solid                       #c0c0c0; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;
             }
 
-            .dataCol1,.headerCol1  {width:45%;}
+            .dataCol1,.headerCol1  {width:20%;}
             .dataCol1B,.headerCol1B  {width:25%;}
             .dataCol2,.headerCol2 {width:10%;text-align: center;}
             .dataCol3,.headerCol3 {width:10%;text-align: center;}
@@ -41,8 +41,8 @@
             .headerColLast{background: #dee6ef !important;font-size:16pt;font-weight:700;text-align: center}
             .headerCol {background: #ffff00;border:none;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;}
 
-            .dataColItemNumber{font-weight: 800;font-size:13pt;width:14;height:86px;background: #dde8cb!important;border:none!important;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;}            
-            .dataColItemDesc{width:92px;background: #dde8cb!important;border:none!important;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;}
+            .dataColItemNumber{text-align:center;font-weight: 800;font-size:13pt;width:14;height:86px;background: #dde8cb!important;border:none!important;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;}            
+            .dataColItemDesc{width:112px;background: #dde8cb!important;border:none!important;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;}
             .dataColCalification{background: #dee6ef !important;font-size:16pt !important;font-weight:700;text-align: center}
             .dataCol{background: #ffffff;border-top: 1.50pt solid #c0c0c0; border:none;padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.22cm; padding-right: 0cm;     }
 
@@ -126,7 +126,7 @@
                 <? } else {//if (!$showonly_msg){?>
                     <h1><?= $msg_error ?></h1>
                 <? }//if (!$showonly_msg){?>
-                <p><span class="copy-left">&copy;</span> 2020 <b>mirubrica.com v.<?= $version ?></b> | Una idea original de <a href="sergiobadal.com">Sergio Badal</a>. <span class="contactCopyLeft">Contáctame si quieres usarla.</span></p>
+                <p><span class="copy-left">&copy;</span> 2021 <b>mirubrica.com v.<?= $version ?></b> | Una idea original de <a href="http://www.sergiobadal.com">Sergio Badal</a>. <span class="contactCopyLeft">Contáctame si quieres usarla.</span></p>
             </footer>
 
         </div>

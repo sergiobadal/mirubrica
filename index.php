@@ -1,14 +1,22 @@
 <?
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 $version = 1.2;
+function contains($a, $b) {
+    if ($b == "")
+        return TRUE;
+    if (strpos((string) $a, (string) $b) === FALSE) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
 
+function is_localhost() {
+    return (contains(@$_SERVER['HTTP_HOST'], "local"));
+}
 function fill_html($html, $values) {
-
-
-
     for ($x = 2; $x <= count($values) - 1; $x++) {
         $html = str_replace("#" . ($x - 1) . "#", $values[$x], $html);
     }
@@ -53,10 +61,16 @@ if ($str == "") {
     if (isset($folder) && isset($rbkfile)) {
         $filename = 'repo/' . $folder . '/' . $rbkfile . ".html";
         if (file_exists($filename))
-            $htmlfile = file_get_contents('repo/' . $folder . '/' . $rbkfile . ".html");
+            $htmlfile = file_get_contents($filename);
     }
     if ($htmlfile == "") {
         $msg_error = "Vaya, no sabemos generar la rúbrica que nos pides.<br>Contacta con el docente que te ha proporcionado el enlace.";
+        if (is_localhost()) 
+        {
+            echo $msg_error."<br>PATH HTML (html file cant contain an X: -".$filename."-";        
+            die;
+        
+        }
     } else {
         $values = array();
         $i = 0;
